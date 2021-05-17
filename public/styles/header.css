@@ -5,5 +5,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #fff3db;
+  background-image: url("https://www.transparenttextures.com/patterns/cubes.png"); 
 }
 
