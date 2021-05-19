@@ -7,7 +7,12 @@
 
 
 $(document).ready(() => {
-  
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   const renderTweets = function() {
     const url = '/tweets';
     $.ajax({url}).then((response) => {
@@ -30,7 +35,7 @@ $(document).ready(() => {
       <p class="id">${tweet.user.handle}</p>
     </header>
     <body>
-      <p class="tweet-text">${tweet.content.text}</p>
+      <p class="tweet-text">${escape(tweet.content.text)}</p>
     </body>
     <footer class="tweet-footer">
       <div class="footer-content">
@@ -54,6 +59,7 @@ $(document).ready(() => {
       alert("Too many characters, MAX 140!");
     } else {
       $.post('/tweets', $(this).serialize());
+      $('#tweet-text').val('');
       renderTweets();
     }
   });
