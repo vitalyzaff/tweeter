@@ -44,11 +44,15 @@ const data = [
 
 $(document).ready(() => {
   
-  const renderTweets = function(tweets) {
-    for (let tweet of tweets) {
-      createTweetElement(tweet);
-    }
+  const renderTweets = function() {
+    const url = '/tweets';
+    $.ajax({url}).then((response) => {
+      for (let tweet of response) {
+        createTweetElement(tweet);
+      }
+    });
   };
+
   
   const createTweetElement = function(tweet) {
     $('#tweets').append(`<article class="tweet">
@@ -76,7 +80,7 @@ $(document).ready(() => {
   </div>
   </article>`);
   };
-  renderTweets(data);
+  renderTweets();
 
   $("#textInput").submit(function(event) {
     event.preventDefault();
@@ -84,5 +88,7 @@ $(document).ready(() => {
 
   });
   
-
 });
+
+
+
