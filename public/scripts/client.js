@@ -5,5 +5,5 @@
  */
 
 $(document).ready(() => {
-  document.getElementById('time').innerHTML = timeago.format(1473245023718);
+  document.getElementById('time').innerHTML = timeago.format(1621202609850);
 });
