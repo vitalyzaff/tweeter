@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /*
  * Client-side JS logic goes here
  * jQuery is already loaded
@@ -76,4 +77,12 @@ $(document).ready(() => {
   </article>`);
   };
   renderTweets(data);
+
+  $("#textInput").submit(function(event) {
+    event.preventDefault();
+    $.post('/tweets', $(this).serialize());
+
+  });
+  
+
 });
