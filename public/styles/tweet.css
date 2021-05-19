@@ -56,3 +56,12 @@ article {
 .date-posted {
   font-size: 16px;
 }
+
+.avatar-name {
+  display: flex;
+  align-items: center;
+}
+
+.name {
+  padding-left: .5em;
+}
