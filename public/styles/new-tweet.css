@@ -34,3 +34,11 @@ label {
   font-weight: bold;
 }
 
+.error {
+  padding-top: 1%;
+  color: red;
+  font-size: 18px;
+  font-weight: bold;
+  display: none;
+}
+

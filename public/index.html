@@ -52,6 +52,8 @@
         <form method='POST' action="/tweets" id="textInput">
           <label for="tweet-text">What are you humming about?</label>
           <input name="text" id="tweet-text"/>
+          <div class='error' id='error-short'>Your tweet is empty, c'mon...type something!</div>
+          <div class='error' id='error-long'>Take it easy! MAX length is only 140 characters!</div>
           <div class='submit'>
             <button type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>

@@ -54,13 +54,22 @@ $(document).ready(() => {
     event.preventDefault();
     let count = $('#tweet-text').val().length;
     if (count === 0) {
-      alert("Your tweet is empty!");
+      if ($('#error-short').is(":hidden")) {
+        $('#error-long').hide();
+        $('#error-short').slideDown();
+        console.log('nolength-', count.length);
+      }
     } else if (count > 140) {
-      alert("Too many characters, MAX 140!");
+      if ($('#error-long').is(":hidden")) {
+        $('#error-short').hide();
+        $('#error-long').slideDown();
+        console.log('length-', count.length);
+      }
     } else {
-      $.post('/tweets', $(this).serialize());
+      $('.error').slideUp();
+      $.post('/tweets', $(this).serialize()).then(() => renderTweets());
       $('#tweet-text').val('');
-      renderTweets();
+      console.log('success');
     }
   });
   renderTweets();
