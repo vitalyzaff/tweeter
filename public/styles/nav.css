@@ -1,3 +1,4 @@
+/* navigation bar design */
 nav {
   display: flex;
   height:120px;
@@ -13,7 +14,7 @@ nav {
   left: 0;
   width: 100%;
 }
-
+/* logo design */
 nav span.logo {
   font-family: 'Bungee', cursive;
   font-size: 32px;
@@ -25,6 +26,7 @@ nav div {
   align-items: center;
 }
 
+/* wrtie new tweet design */
 .fa-angle-double-down {
   color: red;
 }
@@ -33,6 +35,7 @@ nav div {
   cursor: pointer;
 }
 
+/* create tweet animation */
 #arrow {
   animation: MoveUpDown 1s linear infinite;
 }

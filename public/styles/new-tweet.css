@@ -1,10 +1,11 @@
+/* submit button design */
 button {
   background-color: #4056A1;
   color: #FFFFFF;
   border: 2px solid #4056A1;
   cursor: pointer
 }
-
+/* submit button and counter */
 .submit {
   font-family: 'Bungee', cursive;
   display: flex;
@@ -12,6 +13,7 @@ button {
   margin-top: .5em;
 }
 
+/* text box design */
 #tweet-text {
   width: 100%;
   background-color: #f4f1ec;
@@ -35,7 +37,7 @@ section.new-tweet {
 label {
   font-weight: bold;
 }
-
+/* error message when length of the tweet is either 0 or over 140 */
 .error {
   padding-top: 1%;
   color: red;

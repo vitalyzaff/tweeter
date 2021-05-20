@@ -5,14 +5,17 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-
+// wait until whole page loads
 $(document).ready(() => {
+  
+  // function to prevent xss attacks
   const escape = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
 
+  // rendering tweets based on the input
   const renderTweets = function() {
     const url = '/tweets';
     $.ajax({url}).then((response) => {
@@ -23,7 +26,7 @@ $(document).ready(() => {
     });
   };
 
-  
+  // creating new tweet base on the information that user have provided
   const createTweetElement = function(tweet) {
     $('#tweets').prepend(`<article class="tweet">
     <div class="content">
@@ -50,6 +53,8 @@ $(document).ready(() => {
   </div>
   </article>`);
   };
+  
+  // prevent webpage from reloading and checking if input length is correct. if it is post to /tweets json file
   $("#textInput").submit(function(event) {
     event.preventDefault();
     let count = $('#tweet-text').val().length;
@@ -73,7 +78,9 @@ $(document).ready(() => {
   $('.write-tweet').click(() => {
     $('.new-tweet').slideDown();
   });
-
+  
+  
+  // calling the function to render all the tweers
   renderTweets();
 });
 
