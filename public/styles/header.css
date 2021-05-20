@@ -10,7 +10,6 @@ header.profile {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #fff3db;
-  background-image: url("https://www.transparenttextures.com/patterns/cubes.png"); 
+  background-color: #ffbb00;
+  background-image: url("https://www.transparenttextures.com/patterns/always-grey.png"); 
 }
-

@@ -3,6 +3,10 @@
   border: 4px solid #545149;
 }
 
+.container {
+  margin-bottom: 80px;
+}
+
 .tweet:hover {
   box-shadow: 5px 5px #a1a1a1;
 }

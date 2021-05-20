@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <!-- Meta Information -->
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
     <title>Tweeter - Home Page</title>
 
     <!-- External CSS -->
@@ -37,16 +38,16 @@
         <i id='arrow' class="fas fa-angle-double-down"></i>
       </div>
     </nav>
-    <header class="profile">
+    <!-- PROFILE HEADER -->
+    <header class="profile" id='prof'>
       <div class="avatar">
           <img src="/images/profile-hex.png"> 
       </div>
       <br>
       <div class="name">
-          <h2>Your Name</h2>
+          <h2>Random User</h2>
       </div>
   </header>
-
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
@@ -61,10 +62,11 @@
           </div>
         </form>
       </section>
-      <div id='top'><i id='up' class="fas fa-angle-double-up"></i></div>
       <div id='tweets'>
         <!-- new tweet will go here -->
       </div>
     </main>
+    <footer id='footer'>Vitaly Zavgorodnev. Project for Lighthouse Labs. 2021</footer>
+    <div id='top'><i id='up' class="fas fa-angle-double-up"></i></div>
   </body>
 </html>
