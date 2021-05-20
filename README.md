@@ -15,3 +15,27 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+- Body-parser
+- Chance
+
+## Final Product 
+
+!["desktop view"](docs/desktop.png)
+
+!["mobile view"](docs/mobile-view.png)
+
+!["mobile on scroll"](docs/mobile-on-scroll.png)
+
+!["tweet box"](docs/tweet-box.png)
+
+!["tweet long input"](docs/tweet-long-input.png)
+
+!["tweet no input"](docs/tweet-no-input.png)
+
+
+
+
+
+
+
+
