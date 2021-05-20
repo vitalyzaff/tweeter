@@ -7,7 +7,7 @@
 
 
 $(document).ready(() => {
-  const escape = function (str) {
+  const escape = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
@@ -57,21 +57,23 @@ $(document).ready(() => {
       if ($('#error-short').is(":hidden")) {
         $('#error-long').hide();
         $('#error-short').slideDown();
-        console.log('nolength-', count.length);
       }
     } else if (count > 140) {
       if ($('#error-long').is(":hidden")) {
         $('#error-short').hide();
         $('#error-long').slideDown();
-        console.log('length-', count.length);
       }
     } else {
       $('.error').slideUp();
       $.post('/tweets', $(this).serialize()).then(() => renderTweets());
+      $('.counter').val(140);
       $('#tweet-text').val('');
-      console.log('success');
     }
   });
+  $('.write-tweet').click(() => {
+    $('.new-tweet').slideDown();
+  });
+
   renderTweets();
 });
 
